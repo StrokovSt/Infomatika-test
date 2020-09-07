@@ -1,0 +1,34 @@
+/* ----------------- Разметкdа под desktop ----------------- */
+
+.container {
+  min-width: 320px;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 125px;
+}
+
+/* ----------------- Разметкdа под big-tablet ----------------- */
+
+@media (max-width: $desktop-width) {
+  .container {
+    padding: 0 60px;
+  }
+}
+
+/* ----------------- Разметкdа под tablet ----------------- */
+
+@media (max-width: $big-tablet-width) {
+  .container {
+    padding: 0 30px;
+  }
+}
+
+/* ----------------- Разметкdа под mobile ----------------- */
+
+@media (max-width: $tablet-width) {
+  .container {
+    padding: 0 15px;
+    padding-bottom: 5rem;
+  }
+}

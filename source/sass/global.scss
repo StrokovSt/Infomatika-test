@@ -1,0 +1,82 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  position: relative;
+
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+
+  font-family: "Circe", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: normal;
+  color: #000000;
+
+  overflow-x: hidden;
+  background: radial-gradient(at center, $background-light-color, $background-middle-color, $background-color);
+
+  &::-webkit-scrollbar {
+    width: 0.55rem;
+  }
+
+  &::-webkit-scrollbar-track {
+  	background-color: #f5f5f5;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: rgb(73,125,189);
+    border-radius: 0.25rem;
+  }
+}
+
+.body-page {
+  &--blur {
+    &::after {
+      content: "";
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 10vh;
+      bottom: 0;
+
+      background-color: grey;
+      filter: blur(1px);
+      opacity: 0.5;
+      transition: 0.25s ease all;
+    }
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.visually-hidden {
+  position: absolute;
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  border: 0;
+
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
